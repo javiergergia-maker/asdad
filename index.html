@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación</title>
+</head>
+
+<body style="margin:0; background:black; text-align:center;">
+
+<!-- INTRO -->
+<div id="intro" style="
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:10;
+">
+
+<h2>💖 Bienvenido 💖</h2>
+<p>Presiona para ver la invitación</p>
+
+<button onclick="openInv()" style="
+padding:15px;
+font-size:18px;
+background:pink;
+border:none;
+border-radius:20px;
+">
+Abrir Invitación
+</button>
+
+</div>
+
+<!-- INVITACIÓN -->
+<div id="main" style="display:none;">
+
+<img src="fondo.jpg" style="width:100%; height:auto;">
+
+<br><br>
+
+<button onclick="map()">📍 Ubicación</button>
+<button onclick="confirm()">✅ Confirmar</button>
+<button onclick="raffle()">🎁 Sorteo</button>
+
+</div>
+
+<script>
+
+function openInv(){
+  document.getElementById("intro").style.display="none";
+  document.getElementById("main").style.display="block";
+}
+
+// BOTONES
+function map(){
+  window.open("https://maps.google.com/?q=1621+Bridge+Rd+SE");
+}
+
+function confirm(){
+  window.open("https://wa.me/17272837263");
+}
+
+function raffle(){
+  alert("🎁 Sorteo funcionando correctamente");
+}
+
+</script>
+
+</body>
+</html>
